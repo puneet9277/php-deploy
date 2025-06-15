@@ -2,13 +2,15 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      php: 8.1
     commands:
-      - echo "Nothing to install"
+      - echo "Skipping runtime install, using existing environment"
   build:
     commands:
-      - echo "Nothing to build"
+      - echo "Build phase - no build needed for PHP"
+  post_build:
+    commands:
+      - echo "Build complete"
+
 artifacts:
   files:
     - '**/*'
